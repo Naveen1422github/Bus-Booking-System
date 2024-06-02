@@ -1,0 +1,30 @@
+/* General styling for all views */
+.sapUiSmallMargin {
+    margin: 1rem;
+}
+
+.vboxContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.inputField {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.pageTitle {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0070f3; /* Change color as needed */
+}

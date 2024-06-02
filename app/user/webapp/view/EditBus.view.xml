@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="app.user.controller.EditBus"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <VBox class="sapUiSmallMargin">
+        <Input id="busNumberInput" placeholder="Enter Bus Number" />
+        <Button text="Fetch Bus Details" press=".onFetchBusDetails" />
+    </VBox>
+    <Dialog id="busDetailsDialog" title="Edit Bus Details">
+        <VBox class="sapUiSmallMargin">
+            <Label text="Bus Name" />
+            <Input value="{busDetails>/busName}" />
+            <Label text="Source" />
+            <Input value="{busDetails>/source}" />
+            <Label text="Destination" />
+            <Input value="{busDetails>/destination}" />
+            <Label text="Departure Time" />
+            <Input value="{busDetails>/departureTime}" />
+            <Label text="Arrival Time" />
+            <Input value="{busDetails>/arrivalTime}" />
+            <Label text="Price" />
+            <Input value="{busDetails>/price}" />
+            <Label text="Total Seats" />
+            <Input value="{busDetails>/totalSeats}" />
+        </VBox>
+        <endButton>
+            <Button text="Save" press=".onSaveBusDetails" />
+        </endButton>
+        <beginButton>
+            <Button text="Cancel" press=".onCancel" />
+        </beginButton>
+    </Dialog>
+</mvc:View>

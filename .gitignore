@@ -1,0 +1,7 @@
+
+# added by cds
+.cdsrc-private.json
+
+# auto generated wildcard
+db/.env
+node_modules

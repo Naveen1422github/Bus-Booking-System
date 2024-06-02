@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+
+    <Dialog id="bookingDialog" title="Book Bus" draggable="true" resizable="true">
+        <VBox id="bookingForm">
+            <Label text="Bus Name" />
+            <Input id="busName" value="{busDetails>/busName}" enabled="false" />
+            
+            <Label text="Bus Number" />
+            <Input id="busNumber" value="{busDetails>/busNumber}" enabled="false" />
+
+            <Label text="User Name" />
+            <Input id="userName" value="User1 hardcoded" enabled="false" />
+
+            <Label text="Travel Date" />
+
+            <DatePicker
+                id="travelDate"
+                valueFormat="dd-MM-yyyy"
+                displayFormat="dd Mmm yyyy"
+                value="{ path: 'dateModel>/currentDate', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'yyyy-MM-dd' } }" 
+                change="onDateChange"
+            />
+
+            <Label text="Total Seats available" />
+            <Input id="seatsAvailable" value="{seatsAvailable>/seatsAvailable}" enabled="false" />
+
+            <Label text="Number of Passengers" />
+            <Input id="passengerCount" type="Number" liveChange=".onPassengerCountChange" />
+
+            <VBox id="passengerDetailsVBox"></VBox>
+
+            <Label text="Mobile Number" />
+            <Input id="mobileNumber" type="Tel" value="23323432" />
+
+            <Label text="Email" />
+            <Input id="email" type="Email" value="dfdfd"/>
+        </VBox>
+        
+        <buttons>
+            <Button text="Cancel" press="onCancelBooking" />
+            <Button text="Book" type="Emphasized" press="onConfirmBooking" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

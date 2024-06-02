@@ -1,0 +1,21 @@
+<mvc:View controllerName="app.user.controller.home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="User Login">
+        <headerContent>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Sign Up" press="onSignUp" class="button"/>
+            </Toolbar>
+        </headerContent>
+        <content>
+            <VBox class="sapUiSmallMargin vboxContainer">
+                <Text class="pageTitle" text="User Login" />
+                <Input id="loginUserName" placeholder="Email" class="inputField"/>
+                <Input id="loginPassword" placeholder="Password" type="Password" class="inputField"/>
+                <Button text="Sign In" press="onSignIn" class="button"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

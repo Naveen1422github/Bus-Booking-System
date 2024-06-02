@@ -1,0 +1,31 @@
+<mvc:View
+    controllerName="app.user.controller.SignUp"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Sign Up">
+        <content>
+            <VBox class="sapUiSmallMargin vboxContainer">
+                <Text class="pageTitle" text="Create a New Account" />
+                <Input id="signUpUserName" placeholder="Email" class="inputField" submit="onSignUp" />
+                <Input id="signUpPassword" placeholder="Password" type="Password" class="inputField" submit="onSignUp" />
+                <CheckBox id="signUpIsAdmin" text="Admin" select="onIsAdminSelect" class="inputField"/>
+                <Button text="Sign Up" press="onSignUp" class="button"/>
+            </VBox>
+        </content>
+    </Page>
+
+    <!-- Secret Key Dialog -->
+    <Dialog id="secretKeyDialog" title="Enter Secret Key">
+        <VBox class="sapUiSmallMargin">
+            <Text class="dialogTitle" text="Admin Secret Key" />
+            <Input id="secretKeyInput" placeholder="Enter secret key" type="Password" class="inputField"/>
+        </VBox>
+        <endButton>
+            <Button text="Cancel" press="onSecretKeyCancel" class="button"/>
+        </endButton>
+        <beginButton>
+            <Button text="Submit" press="onSecretKeySubmit" class="button"/>
+        </beginButton>
+    </Dialog>
+</mvc:View>

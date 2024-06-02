@@ -1,0 +1,6 @@
+VIEW BusBookingService_user AS SELECT
+  user_0.id,
+  user_0.userName,
+  user_0.password,
+  user_0.isAdmin
+FROM busBooking_user AS user_0

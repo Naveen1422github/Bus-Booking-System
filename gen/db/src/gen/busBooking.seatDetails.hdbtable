@@ -1,0 +1,11 @@
+COLUMN TABLE busBooking_seatDetails (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  ID NVARCHAR(36) NOT NULL,
+  busNumber NVARCHAR(5000) NOT NULL,
+  "DATE" NVARCHAR(5000) NOT NULL,
+  seatsAvailable INTEGER,
+  PRIMARY KEY(ID, busNumber, "DATE")
+)

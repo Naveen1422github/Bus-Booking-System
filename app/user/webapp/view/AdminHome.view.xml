@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="app.user.controller.AdminHome"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+>
+    <Page id="page" title="Admin Home">
+        <content>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Add Bus" press="onPressAddBus">
+                <TileContent>
+                    <ImageContent src="sap-icon://add"/>
+                </TileContent>
+            </GenericTile>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Edit Bus" press="onPressEditBus">
+                <TileContent>
+                    <ImageContent src="sap-icon://edit"/>
+                </TileContent>
+            </GenericTile>
+        </content>
+    </Page>
+</mvc:View>

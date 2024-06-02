@@ -1,0 +1,12 @@
+COLUMN TABLE busBooking_busDetails (
+  id INTEGER NOT NULL,
+  busName NVARCHAR(5000),
+  busNumber NVARCHAR(5000) NOT NULL,
+  source NVARCHAR(5000),
+  destination NVARCHAR(5000),
+  departureTime NVARCHAR(5000),
+  arrivalTime NVARCHAR(5000),
+  price INTEGER,
+  totalSeats INTEGER,
+  PRIMARY KEY(id, busNumber)
+)

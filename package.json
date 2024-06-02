@@ -1,20 +1,36 @@
 {
-  "name": "BusBooking",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^7",
-    "express": "^4"
-  },
-  "devDependencies": {
-    "@cap-js/sqlite": "^1",
-    "@sap/eslint-plugin-cds": "^3",
-    "eslint": "^9"
-  },
-  "scripts": {
-    "start": "cds-serve"
-  }
+    "name": "BusBookingService",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^7",
+        "@sap/cds-hana": "^2",
+        "express": "^4"
+    },
+    "devDependencies": {
+        "@cap-js/sqlite": "^1",
+        "@sap/cds-dk": "^7",
+        "@sap/eslint-plugin-cds": "^3",
+        "@sap/ux-specification": "UI5-1.124",
+        "eslint": "^9",
+        "rimraf": "^5.0.5"
+    },
+    "scripts": {
+        "start": "cds-serve",
+        "watch-user": "cds watch --open user/webapp/index.html?sap-ui-xx-viewCache=false",
+        "undeploy": "cf undeploy BusBookingService --delete-services --delete-service-keys --delete-service-brokers",
+        "build": "rimraf resources mta_archives && mbt build --mtar archive",
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    },
+    "cds": {
+        "requires": {
+            "db": "hana"
+        }
+    },
+    "sapux": [
+        "app/user"
+    ]
 }

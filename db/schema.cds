@@ -1,5 +1,6 @@
-namespace busBooking;
+using { managed, cuid } from '@sap/cds/common';
 
+namespace busBooking;
 entity busDetails {
     key id            : Integer;
         busName       : String;
@@ -9,24 +10,25 @@ entity busDetails {
         departureTime : String;
         arrivalTime   : String;
         price         : Integer;
-        totalSheets   : Integer;
+        totalSeats   : Integer;
 }
 
-entity seatDetails {
-    key id             : Integer;
+entity seatDetails: managed, cuid {
     key busNumber      : String;
     key date           : String;
         seatsAvailable : Integer;
 }
 
-entity passengerDetails {
-    key id            : Integer;
+entity passengerDetails: managed, cuid {
+        bookingId     : Integer;
         userName      : String;
         passengerName : String;
         gender        : String;
         age           : Integer;
         busNumber     : String;
         date          : String;
+        contactNumber : String;
+        email         : String;
 }
 
 entity user {

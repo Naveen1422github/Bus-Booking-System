@@ -1,0 +1,11 @@
+VIEW BusBookingService_busDetails AS SELECT
+  busDetails_0.id,
+  busDetails_0.busName,
+  busDetails_0.busNumber,
+  busDetails_0.source,
+  busDetails_0.destination,
+  busDetails_0.departureTime,
+  busDetails_0.arrivalTime,
+  busDetails_0.price,
+  busDetails_0.totalSeats
+FROM busBooking_busDetails AS busDetails_0

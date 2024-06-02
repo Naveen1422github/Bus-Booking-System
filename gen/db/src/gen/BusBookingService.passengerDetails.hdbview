@@ -1,0 +1,16 @@
+VIEW BusBookingService_passengerDetails AS SELECT
+  passengerDetails_0.createdAt,
+  passengerDetails_0.createdBy,
+  passengerDetails_0.modifiedAt,
+  passengerDetails_0.modifiedBy,
+  passengerDetails_0.ID,
+  passengerDetails_0.bookingId,
+  passengerDetails_0.userName,
+  passengerDetails_0.passengerName,
+  passengerDetails_0.gender,
+  passengerDetails_0.age,
+  passengerDetails_0.busNumber,
+  passengerDetails_0."DATE",
+  passengerDetails_0.contactNumber,
+  passengerDetails_0.email
+FROM busBooking_passengerDetails AS passengerDetails_0

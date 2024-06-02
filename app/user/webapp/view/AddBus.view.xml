@@ -1,0 +1,25 @@
+<mvc:View
+    controllerName="app.user.controller.AddBus"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+>
+    <Page id="page" title="Add Bus">
+        <content>
+            <VBox class="sapUiSmallMargin vboxContainer">
+                 <Text text="Fill Details to Add Bus" class="pageTitle"/>
+                <Input id="busName" value="{busModel>/busName}" placeholder="Bus Name" class="inputField"/>
+                <Input id="busNumber" value="{busModel>/busNumber}" placeholder="Bus Number" class="inputField"/>
+                <Input id="source" value="{busModel>/source}" placeholder="Source" class="inputField"/>
+                <Input id="destination" value="{busModel>/destination}" placeholder="Destination" class="inputField"/>
+                <Input id="departureTime" value="{busModel>/departureTime}" placeholder="Departure Time" class="inputField"/>
+                <Input id="arrivalTime" value="{busModel>/arrivalTime}" placeholder="Arrival Time" class="inputField"/>
+                <Input id="price" value="{busModel>/price}" placeholder="Price" type="Number" class="inputField"/>
+                <Input id="totalSeats" value="{busModel>/totalSeats}" placeholder="Total Seats" type="Number" class="inputField"/>
+                <Button text="Add Bus" press="onAddBus" class="button"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,7 @@
+COLUMN TABLE busBooking_user (
+  id INTEGER NOT NULL,
+  userName NVARCHAR(5000) NOT NULL,
+  password NVARCHAR(5000),
+  isAdmin BOOLEAN,
+  PRIMARY KEY(id, userName)
+)

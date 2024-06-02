@@ -1,0 +1,10 @@
+VIEW BusBookingService_seatDetails AS SELECT
+  seatDetails_0.createdAt,
+  seatDetails_0.createdBy,
+  seatDetails_0.modifiedAt,
+  seatDetails_0.modifiedBy,
+  seatDetails_0.ID,
+  seatDetails_0.busNumber,
+  seatDetails_0."DATE",
+  seatDetails_0.seatsAvailable
+FROM busBooking_seatDetails AS seatDetails_0

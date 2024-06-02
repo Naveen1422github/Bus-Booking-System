@@ -1,0 +1,17 @@
+COLUMN TABLE busBooking_passengerDetails (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  ID NVARCHAR(36) NOT NULL,
+  bookingId INTEGER,
+  userName NVARCHAR(5000),
+  passengerName NVARCHAR(5000),
+  gender NVARCHAR(5000),
+  age INTEGER,
+  busNumber NVARCHAR(5000),
+  "DATE" NVARCHAR(5000),
+  contactNumber NVARCHAR(5000),
+  email NVARCHAR(5000),
+  PRIMARY KEY(ID)
+)

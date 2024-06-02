@@ -1,0 +1,194 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "app.user",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.5",
+      "toolsId": "a04d1245-1b60-4cc9-a993-c5a502669dd3"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/bus-booking/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.124.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "app.user.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "app.user.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "Routehome",
+          "pattern": ":?query:",
+          "target": [
+            "Targethome"
+          ]
+        },
+        {
+          "name": "RouteSignUp",
+          "pattern": "signUp",
+          "target": [
+            "TargetSignUp"
+          ]
+        },
+        {
+          "name": "RouteAdminHome",
+          "pattern": "adminHome",
+          "target": [
+            "TargetAdminHome"
+          ]
+        },
+        {
+          "name": "RouteUserHome",
+          "pattern": "userHome",
+          "target": [
+            "TargetUserHome"
+          ]
+        },
+        {
+          "name": "RouteAddBus",
+          "pattern": "addBus",
+          "target": [
+            "TargetAddBus"
+          ]
+        },
+        {
+          "name": "RouteEditBus",
+          "pattern": "editBus",
+          "target": [
+            "TargetEditBus"
+          ]
+        }
+      ],
+      "targets": {
+        "Targethome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "home",
+          "viewName": "home"
+        },
+        "TargetSignUp": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "signUp",
+          "viewName": "SignUp"
+        },
+        "TargetAdminHome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "adminHome",
+          "viewName": "AdminHome"
+        },
+        "TargetUserHome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "userHome",
+          "viewName": "UserHome"
+        },
+        "TargetAddBus": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "addBus",
+          "viewName": "AddBus"
+      },
+      "TargetEditBus": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "editBus",
+        "viewName": "EditBus"
+    }
+      }
+    },
+    "rootView": {
+      "viewName": "app.user.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
