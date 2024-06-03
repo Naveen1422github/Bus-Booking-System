@@ -1,0 +1,129 @@
+<mvc:View controllerName="usersegment.user.controller.user"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+
+
+	<mvc:dependents>
+		<core:CommandExecution id="_IDGenCommandExecution1"
+				command="Share"
+				enabled="true"
+				execute=".shareAction"
+			/>
+	</mvc:dependents>
+        
+
+    <Page id="page" title="{i18n>title}">
+
+        <OverflowToolbar id="otb8">
+
+            
+           <ToolbarSpacer id="_IDGenToolbarSpacer3"/>
+
+		   <Label id="_IDGenLabel3" text="Search Buses:"/>
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData5"
+					   shrinkable="true"
+					   minWidth = "100px"/>
+			   </layoutData>
+		   <Label id="_IDGenLabel4"/>
+		
+
+		   <Input id="sourceInput" width="20%" placeholder="Source Station" value="bhopal">
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData6"
+					   shrinkable="true"
+					   minWidth = "90px"/>
+			   </layoutData>
+		   </Input>
+
+		   <Input id="destinationInput" width="30%" placeholder="Destination Station" value="delhi">
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="IDGenOverflowToolbarLayoutData7"
+					   shrinkable="true"
+					   minWidth = "90px"/>
+			   </layoutData>
+		   </Input>
+
+           <Button id="_IDGenButton2" text="Search" type="Emphasized" press="onSearchBuses">
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData8" priority="NeverOverflow"/>
+			   </layoutData>
+		   </Button>
+
+           <ToolbarSpacer id="_IDGenToolbarSpacer4"/>
+
+	   </OverflowToolbar>
+
+       <content>
+          <Table items="{inputModel>/}" id="busDetails" selectionChange="onSelect" mode="None">
+                <columns>
+                    <Column id="_IDGenColu" width="4rem">
+                        <header>
+                            <Label id="_IDGenLl12" wrapping="true" text="ID" />
+                        </header>
+                    </Column>
+                    <Column id="_colLevel" width="6rem">
+                        <header>
+                            <Label id="_IDLevel" wrapping="true" text="Bus Name" />
+                        </header>
+                    </Column>
+
+                    <Column id="_colLevdfel" width="6rem">
+                        <header>
+                            <Label id="_IDLedfdfdvel" wrapping="true" text="Bus Number" />
+                        </header>
+                    </Column>
+                    <Column id="_colLdfevel" width="6rem">
+                        <header>
+                            <Label id="_IDdfLevel" wrapping="true" text="Source Station" />
+                        </header>
+                    </Column>
+                    <Column id="_cddolLevel" width="6rem">
+                        <header>
+                            <Label id="_IDLevdel" wrapping="true" text="Destination Station" />
+                        </header>
+                    </Column>
+                    <Column id="_coldLevel" width="6rem">
+                        <header>
+                            <Label id="_IDLdevel" wrapping="true" text="Departure Time" />
+                        </header>
+                    </Column>
+                    <Column id="_IDGenCouuuumn2" width="6rem">
+                        <header>
+                            <Label id="_IDGenLal7" wrapping="true" text="Arrival Time" />
+                        </header>
+                    </Column>
+                    <Column id="_IDGenColmn2" width="6rem">
+                        <header>
+                            <Label id="_IDGenLabl7" wrapping="true" text="Price" />
+                        </header>
+                    </Column>
+                    <Column id="_IDGenColumn2" width="6rem">
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Active" id="item">
+                        <cells>
+                            <Text  text="{inputModel>id}" />
+                            <Text  text="{inputModel>busName}" />
+                            <Text  text="{inputModel>busNumber}" />
+                            <Text  text="{inputModel>source}" />
+                            <Text  text="{inputModel>destination}" />
+                            <Text  text="{inputModel>departureTime}" />
+                            <Text  text="{inputModel>arrivalTime}" />
+                            <Text  text="{inputModel>price}" />
+                            <Button text="Book" type="Emphasized" press="onBookBus"></Button>
+                        </cells>
+
+                    </ColumnListItem>
+                </items>
+            </Table>
+       </content>
+
+      
+
+    </Page>
+
+
+</mvc:View>

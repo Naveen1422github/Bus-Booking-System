@@ -7,14 +7,27 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
     "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
     "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.120.11",
     "eslint": "^9"
   },
   "scripts": {
-    "start": "cds-serve"
-  }
+    "start": "cds-serve",
+    "watch-user": "cds watch --open user/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-bookings": "cds watch --open bookings/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": "hana"
+    }
+  },
+  "sapux": [
+    "app/user",
+    "app/bookings"
+  ]
 }
