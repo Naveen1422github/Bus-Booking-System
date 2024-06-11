@@ -14,6 +14,30 @@
         
 
     <Page id="page" title="{i18n>title}">
+        
+         <!-- <OverflowToolbar id="otb8d8">
+
+            
+           <ToolbarSpacer id="_IDGenTtoolbddarSpaceer33"/>
+
+		   <Label id="_IDGddenLabell3" text="Search Buses:"/>
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="_IDGenOoverflowToddolbarLayoutData5"
+					   shrinkable="true"
+					   minWidth = "100px"/>
+			   </layoutData>
+		   <Label id="_IDGddenLabel4"/>
+		
+
+           <Button id="showBookings" text="Show My Bookings" type="Emphasized" press="onShowBookings">
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="_IDGenOveddrflowolbarLayoutData8" priority="NeverOverflow"/>
+			   </layoutData>
+		   </Button>
+
+           <ToolbarSpacer id="_IDGenToolddbarSpddacer4"/>
+
+	   </OverflowToolbar> -->
 
         <OverflowToolbar id="otb8">
 
@@ -51,7 +75,14 @@
 			   </layoutData>
 		   </Button>
 
-           <ToolbarSpacer id="_IDGenToolbarSpacer4"/>
+           <ToolbarSpacer id="_IDGenTooilbarSpacer4" size = "small"/>
+
+           <!-- <Button id="showBookings" text="Show My Bookings" type="Emphasized" press="onShowBookings">
+			   <layoutData>
+				   <OverflowToolbarLayoutData id="_IDGenOveddrflowolbarLayoutData8" priority="NeverOverflow"/>
+			   </layoutData>
+		   </Button>
+           <ToolbarSpacer id="_IDGenToolbarSpacer4" /> -->
 
 	   </OverflowToolbar>
 
