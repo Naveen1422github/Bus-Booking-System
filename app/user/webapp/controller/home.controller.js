@@ -26,7 +26,12 @@ sap.ui.define([
             oPasswordInput.attachBrowserEvent("keydown", handleEnterPress);
         },
 
+        saveUserName: function (userName) {
+         localStorage.setItem('userName', userName);   
+        },
+
         onSignIn: function () {
+            let that = this;
             var sUserName = this.getView().byId("loginUserName").getValue().toLowerCase();
             var sPassword = this.getView().byId("loginPassword").getValue();
 
@@ -50,8 +55,11 @@ sap.ui.define([
                         MessageToast.show("Invalid username or password.");
                     } else {
                         var oUser = aUsers[0];
-                        // console.log(oUser);
+                        console.log(oUser);
                         if (oUser.password === sPassword) {
+
+                            // save user name on localstorage
+                            that.saveUserName(oUser.userName)
                             if (oUser.isAdmin) {
                                 oRouter.navTo("RouteAdminHome");
                             } else {
@@ -67,6 +75,7 @@ sap.ui.define([
                 }
             });
         },
+
 
         onSignUp: function () {
             const router = sap.ui.core.UIComponent.getRouterFor(this);

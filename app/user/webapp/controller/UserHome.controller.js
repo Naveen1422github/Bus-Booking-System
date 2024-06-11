@@ -182,10 +182,13 @@ sap.ui.define(
 	
 				var busName = oContext.getProperty("busName");
 				var busNumber = oContext.getProperty("busNumber");
-	
+				var userName = localStorage.getItem("userName")
+
+				console.log("hey", userName)
 				var oBusDetailsModel = new JSONModel({
 					busName: busName,
-					busNumber: busNumber
+					busNumber: busNumber,
+					userName: userName
 				});
 	
 	

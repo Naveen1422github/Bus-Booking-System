@@ -9,7 +9,7 @@
             <Input id="busNumber" value="{busDetails>/busNumber}" enabled="false" />
 
             <Label text="User Name" />
-            <Input id="userName" value="User1 hardcoded" enabled="false" />
+            <Input id="userName" value="{busDetails>/userName}" enabled="false" />
 
             <Label text="Travel Date" />
 
